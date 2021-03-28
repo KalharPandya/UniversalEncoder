@@ -1,1 +1,27 @@
-UniversalEncoder KEYWORD1
+#######################################
+# Syntax Coloring Map For Test
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+UniversalEncoder	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+getReadings	KEYWORD2
+setReadings	KEYWORD2
+reset	KEYWORD2
+init	KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+directional_offset	LITERAL1

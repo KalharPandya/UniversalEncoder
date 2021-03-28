@@ -46,10 +46,12 @@
 
 
 #if defined(AVR)
-    #include "./libs/Encoder/Encoder.h"
+    #include <Encoder.h>
 #elif defined(ESP_32)
-    #include "libs/ESP32Encoder/src/ESP32Encoder.h"
+	#include<ESP32Encoder.h>
 #endif
+
+// #include "Arduino.h"
 class UniversalEncoder{
     public:
     int en1, en2,directional_offset;
@@ -70,6 +72,19 @@ class UniversalEncoder{
         	ESP32Encoder::useInternalWeakPullResistors=UP;
         #endif
     }
+
+    //  void init(int encoder1,int encoder2, int dirOffset = 1){
+    //     en1 = encoder1;
+    //     en2 = encoder2;
+    //     directional_offset = dirOffset;
+    //     #if defined(AVR)
+    //         encoder = new Encoder(en1,en2);
+    //     #elif defined(ESP_32)
+    //         encoder->attachHalfQuad(en1,en2);    
+    //     	ESP32Encoder::useInternalWeakPullResistors=UP;
+    //     #endif
+    //  }
+
 
     double getReadings()
     {
