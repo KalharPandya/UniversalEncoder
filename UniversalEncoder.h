@@ -61,6 +61,7 @@ class UniversalEncoder{
     #elif defined(ESP_32)
         ESP32Encoder *encoder = new ESP32Encoder();
     #endif
+    UniversalEncoder(){};
     UniversalEncoder(int encoder1,int encoder2, int dirOffset = 1){
         en1 = encoder1;
         en2 = encoder2;
@@ -73,17 +74,17 @@ class UniversalEncoder{
         #endif
     }
 
-    //  void init(int encoder1,int encoder2, int dirOffset = 1){
-    //     en1 = encoder1;
-    //     en2 = encoder2;
-    //     directional_offset = dirOffset;
-    //     #if defined(AVR)
-    //         encoder = new Encoder(en1,en2);
-    //     #elif defined(ESP_32)
-    //         encoder->attachHalfQuad(en1,en2);    
-    //     	ESP32Encoder::useInternalWeakPullResistors=UP;
-    //     #endif
-    //  }
+     void init(int encoder1,int encoder2, int dirOffset = 1){
+        en1 = encoder1;
+        en2 = encoder2;
+        directional_offset = dirOffset;
+        #if defined(AVR)
+            encoder = new Encoder(en1,en2);
+        #elif defined(ESP_32)
+            encoder->attachHalfQuad(en1,en2);    
+        	ESP32Encoder::useInternalWeakPullResistors=UP;
+        #endif
+     }
 
 
     double getReadings()
