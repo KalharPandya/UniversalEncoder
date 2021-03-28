@@ -1,6 +1,6 @@
 #include <UniversalEncoder.h>
 UniversalEncoder Enc(2,3);
-UniversalEncoder NegativeEnc(4,5,-1);
+UniversalEncoder NegativeEnc(4,5,-1);   //Create Encoder Object from its pin(En1, En2 , DirectionalOffset)
 
 void setup() {
   Serial.begin(115200);
