@@ -1,5 +1,3 @@
-#define ARDUINO AVR
-#define ESP_32 ESP_32
 #if defined (ESP32)
     #define ESP_32 1
 #elif   defined(ARDUINO_AVR_ADK)       
@@ -48,7 +46,7 @@
 
 
 #if defined(AVR)
-    #include "libs/Encoder/Encoder.h"
+    #include "./libs/Encoder/Encoder.h"
 #elif defined(ESP_32)
     #include "libs/ESP32Encoder/src/ESP32Encoder.h"
 #endif
